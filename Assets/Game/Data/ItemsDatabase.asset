@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00925a35b63fab64b812beaa27c40368, type: 3}
   m_Name: ItemsDatabase
   m_EditorClassIdentifier: 
-  <AllItems>k__BackingField: []
+  <AllItems>k__BackingField:
+  - {fileID: 11400000, guid: a213391f8467fdd41aef7d87295c652c, type: 2}
+  - {fileID: 11400000, guid: 9f795377f707cf94d8b1f4ee67bbfada, type: 2}
+  - {fileID: 11400000, guid: 16522989393cb3f4a92747b6db3738a2, type: 2}
+  - {fileID: 11400000, guid: 3a10c26d4116d054db62ee8da215bee5, type: 2}
+  - {fileID: 11400000, guid: 61d55ac47d793a94d8eebe210c84022c, type: 2}
+  - {fileID: 11400000, guid: 466d432ec383b8e49ab5bd271d9aeb1e, type: 2}
+  - {fileID: 11400000, guid: 2cc43d0e4ccb9364e829e91d7078d80b, type: 2}
+  - {fileID: 11400000, guid: 0d29218a1bddd064fa171400c1adde7a, type: 2}
+  - {fileID: 11400000, guid: 08173c5a357522346b857c87134ac90c, type: 2}
+  - {fileID: 11400000, guid: d18d24a76529c104da23c195b996b974, type: 2}
+  - {fileID: 11400000, guid: 3f9373ed25045164b87bfb7ad651cf24, type: 2}
+  - {fileID: 11400000, guid: 13e2d29fb06eadb45a1299043827c680, type: 2}

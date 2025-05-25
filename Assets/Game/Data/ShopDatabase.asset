@@ -12,4 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2cdb2cf4334b44187c3d8777e0423b, type: 3}
   m_Name: ShopDatabase
   m_EditorClassIdentifier: 
-  <ShopItems>k__BackingField: []
+  <ShopItems>k__BackingField:
+  - ItemId: sword_swing_item
+    Price: 1499
+  - ItemId: innovation_bulb_item
+    Price: 1499
+  - ItemId: unconscious_vampire_item
+    Price: 899
+  - ItemId: cool_headphones_item
+    Price: 899
+  - ItemId: anchor_rusty_item
+    Price: 100
+  - ItemId: diamond_item
+    Price: 100
+  - ItemId: ever_stretched_bow_item
+    Price: 100
+  - ItemId: mushroom_item
+    Price: 100
+  - ItemId: deuce_die_item
+    Price: 350
+  - ItemId: anchor_item
+    Price: 350
+  - ItemId: almighty_key_item
+    Price: 350
+  - ItemId: map_item
+    Price: 350
