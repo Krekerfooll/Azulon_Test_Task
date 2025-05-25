@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4662239a32a1ae744849ac721c14ea12, type: 3}
+  m_Name: InnovationBulb_ItemData
+  m_EditorClassIdentifier: 
+  <Id>k__BackingField: innovation_bulb_item
+  <Name>k__BackingField: Bulb Of Innovation
+  <Rarity>k__BackingField: 3
+  <Icon>k__BackingField: {fileID: 21300000, guid: 444ed26cbf54646d7b23be47839c1e9c, type: 3}
+  <IconColor>k__BackingField: {r: 0.8742138, g: 0.7389374, b: 0.33813924, a: 1}
+  <Description>k__BackingField: It's probably the same light bulb that Edison invented.
