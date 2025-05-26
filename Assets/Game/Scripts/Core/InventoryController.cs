@@ -1,33 +1,31 @@
 using System.Collections.Generic;
-using UnityEngine;
 using AzulonTest.Data;
 using System;
 using AzulonTest.UI;
 
 namespace AzulonTest.Managers
 {
-    public class InventoryController : MonoBehaviour
+    public class InventoryController
     {
-        [SerializeField] private ItemsDatabase _itemsDatabase;
-        [SerializeField] private Transform _slotsRoot;
-        [SerializeField] private InventorySlotView _slotPrefab;
+        private InventoryView _inventoryView;
+        private ItemsDatabase _itemsDatabase;
 
-        private List<ItemStack> _items;
-
-        public void Init(List<ItemStack> loadedInventory)
+        public void Init(InventoryView inventoryView, ItemsDatabase itemsDatabase, List<ItemStack> loadedInventory)
         {
-            _items = loadedInventory;
+            _inventoryView = inventoryView;
+            _itemsDatabase = itemsDatabase;
 
-            foreach (var stack in _items)
+            var viewData = new List<InventoryViewSlotData>();
+
+            foreach (var stack in loadedInventory)
             {
                 var data = _itemsDatabase.GetById(stack.ItemId);
                 if (data == null) continue;
 
-                var slot = Instantiate(_slotPrefab, _slotsRoot);
-                var outlineColor = ClobalData.GetColorByRarity(data.Rarity);
-
-                slot.Init(data.Icon, outlineColor, data.IconColor, stack.Count);
+                viewData.Add(new InventoryViewSlotData(data, stack.Count));
             }
+
+            _inventoryView.Init(viewData);
         }
     }
 

@@ -4,7 +4,7 @@ namespace AzulonTest.Data
 {
     public enum ItemRarity { Common, Rare, Epic, Legendary }
 
-    public class ClobalData
+    public class GlobalData
     {
         public static readonly Color DEFAULT_BACKGROUND_COLOR = new Color32(55, 55, 55, 255);
         public static readonly Color DEFAULT_FOREGROUND_COLOR = new Color32(210, 210, 210, 255);
