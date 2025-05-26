@@ -8,6 +8,7 @@ namespace AzulonTest.UI
         event Action<UIController.UIWindowType> OnOpenRequestedFromView;
 
         bool IsVisible { get; }
+        UIController.UIWindowType PreferedClosePath { get; }
 
         void Open();
         void Close();

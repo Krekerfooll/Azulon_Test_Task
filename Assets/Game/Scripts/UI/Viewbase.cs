@@ -5,7 +5,7 @@ using static AzulonTest.UI.UIController;
 
 namespace AzulonTest.UI
 {
-    public abstract class ViewBase : MonoBehaviour, IView
+    public abstract class ViewBase : MonoBehaviour, IView, IDisposable
     {
         public event Action OnCloseRequestedFromView;
         public event Action<UIWindowType> OnOpenRequestedFromView;
@@ -14,6 +14,7 @@ namespace AzulonTest.UI
         [SerializeField] private Button _closeButton;
 
         public bool IsVisible => _root != null && _root.activeSelf;
+        public virtual UIWindowType PreferedClosePath { get; protected set; } = UIWindowType.None;
 
         public virtual void Open()
         {
@@ -38,5 +39,7 @@ namespace AzulonTest.UI
         {
             OnOpenRequestedFromView?.Invoke(view);
         }
+
+        public abstract void Dispose();
     }
 }

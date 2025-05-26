@@ -1,24 +1,24 @@
-using UnityEngine;
 using AzulonTest.Data;
 using AzulonTest.UI;
-using System;
 using System.Collections.Generic;
 
 namespace AzulonTest.Managers
 {
     public class ShopController
     {
-        public event Action<bool> OnBuy;
-
         private ShopView _shopView;
         private ItemsDatabase _itemsDatabase;
         private ShopDatabase _shopDatabase;
+        private IInventoryController _inventoryController;
 
-        public void Init(ShopView shopView, ItemsDatabase itemsDatabase, ShopDatabase shopDatabase)
+        public void Init(
+            ShopView shopView, BuyItemView buyItemView, IInventoryController inventoryController, 
+            ItemsDatabase itemsDatabase, ShopDatabase shopDatabase)
         {
             _shopView = shopView;
             _itemsDatabase = itemsDatabase;
             _shopDatabase = shopDatabase;
+            _inventoryController = inventoryController;
 
             var viewData = new List<ShopViewSlotData>();
 
@@ -30,7 +30,13 @@ namespace AzulonTest.Managers
                 viewData.Add(new ShopViewSlotData(data, item.Price));
             }
 
-            _shopView.Init(viewData);
+            _shopView.Init(buyItemView, viewData);
+            _shopView.OnBuy += OnItemBuy;
+        }
+
+        protected virtual void OnItemBuy(string id, int count)
+        {
+            _inventoryController.AddItems(id, count);
         }
     }
 }

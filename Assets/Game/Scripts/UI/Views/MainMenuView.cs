@@ -20,7 +20,11 @@ namespace AzulonTest.UI
         public override void Close()
         {
             base.Close();
+            Dispose();
+        }
 
+        public override void Dispose()
+        {
             foreach (var button in _openViewButtons)
             {
                 button.OnViewOpenRequested -= OnOpenButtonClick;

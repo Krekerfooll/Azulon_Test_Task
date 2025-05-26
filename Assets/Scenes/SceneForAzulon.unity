@@ -550,6 +550,7 @@ MonoBehaviour:
   _mainMenuView: {fileID: 639126791}
   _inventoryView: {fileID: 1502642975}
   _shopView: {fileID: 3315237342260685854}
+  _buyItemView: {fileID: 3315237342260685855}
 --- !u!4 &1075745654
 Transform:
   m_ObjectHideFlags: 0
@@ -877,6 +878,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 886798354628932847, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933759746348610338, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -1208,6 +1233,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2237855843469975377, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 2288411112973986091, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1421,6 +1450,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3222626559304230407, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272873803639355981, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -2678,6 +2731,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b969504838d8cf44b0fb37cd7eccb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3315237342260685855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8739402746813313804, guid: 64d56547ca95f114d9c8532d85ad335a, type: 3}
+  m_PrefabInstance: {fileID: 3315237342260685853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a6dc891a7125e42b4b72eef0e4ab8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

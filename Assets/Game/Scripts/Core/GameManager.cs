@@ -13,6 +13,7 @@ namespace AzulonTest.Managers
         [SerializeField] private MainMenuView _mainMenuView;
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private ShopView _shopView;
+        [SerializeField] private BuyItemView _buyItemView;
 
         private UIController _uiController;
         private InventoryController _inventoryController;
@@ -24,14 +25,22 @@ namespace AzulonTest.Managers
             _inventoryController = new InventoryController();
             _shopController = new ShopController();
 
-            _inventoryController.Init(_inventoryView, _itemsDatabase, new System.Collections.Generic.List<ItemStack>());
-            _shopController.Init(_shopView, _itemsDatabase, _shopDatabase);
+            _inventoryController.Init(_inventoryView, _itemsDatabase);
+            _shopController.Init(_shopView, _buyItemView, _inventoryController, _itemsDatabase, _shopDatabase);
 
             _uiController.SetView(UIWindowType.MainMenu, _mainMenuView);
             _uiController.SetView(UIWindowType.Inventory, _inventoryView);
             _uiController.SetView(UIWindowType.Shop, _shopView);
+            _uiController.SetView(UIWindowType.BuyConfirmation, _buyItemView);
 
             _uiController.Open(UIWindowType.MainMenu);
+        }
+
+        private void OnDestroy()
+        {
+            _mainMenuView.Dispose();
+            _inventoryView.Dispose();
+            _shopView.Dispose();
         }
     }
 }

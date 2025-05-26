@@ -10,6 +10,7 @@ namespace AzulonTest.UI
             MainMenu,
             Shop,
             Inventory,
+            BuyConfirmation,
         }
 
         private Dictionary<UIWindowType, IView> _windows;
@@ -61,7 +62,12 @@ namespace AzulonTest.UI
             if (_currentWindow == UIWindowType.None)
                 return;
 
-            if(_previousWindow == UIWindowType.None)
+            if (_windows.TryGetValue(_currentWindow, out var window) && window.PreferedClosePath != UIWindowType.None)
+            {
+                _previousWindow = window.PreferedClosePath;
+            }
+
+            if (_previousWindow == UIWindowType.None)
             {
                 CloseCurrent();
                 return;

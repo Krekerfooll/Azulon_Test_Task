@@ -6,6 +6,8 @@ namespace AzulonTest.Data
 
     public class GlobalData
     {
+        public const string INVENTORY_DATA_SAVE = "INVENTORY_DATA_SAVE";
+
         public static readonly Color DEFAULT_BACKGROUND_COLOR = new Color32(55, 55, 55, 255);
         public static readonly Color DEFAULT_FOREGROUND_COLOR = new Color32(210, 210, 210, 255);
 

@@ -2,18 +2,20 @@ using AzulonTest.Data;
 using System.Collections.Generic;
 using UnityEngine;
 using static AzulonTest.UI.InventorySlotView;
+using static AzulonTest.UI.UIController;
 
 namespace AzulonTest.UI
 {
     public class InventoryView : ViewBase
     {
+        public override UIWindowType PreferedClosePath => UIWindowType.MainMenu;
+
         [SerializeField] private Transform _slotsRoot;
         [SerializeField] private InventorySlotView _slotPrefab;
 
         public void Init(List<InventoryViewSlotData> loadedInventory)
         {
-            foreach (Transform child in _slotsRoot)
-                Destroy(child.gameObject);
+            Dispose();
 
             foreach (var stack in loadedInventory)
             {
@@ -21,6 +23,20 @@ namespace AzulonTest.UI
                 var slotViewData = InventorySlotViewData.From(stack.Item, stack.Count);
 
                 slot.Init(slotViewData);
+            }
+        }
+
+        public override void Dispose()
+        {
+            if (_slotsRoot == null)
+                return;
+
+            foreach (Transform child in _slotsRoot)
+            {
+                if (child == null)
+                    continue;
+
+                Destroy(child.gameObject);
             }
         }
     }
